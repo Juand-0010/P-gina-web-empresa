@@ -87,7 +87,7 @@
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.18});document.querySelectorAll('.reveal').forEach(item=>observer.observe(item));
   </script>
   <script>
-    localStorage.removeItem('nexora-theme');document.body.classList.remove('light');document.querySelector('meta[name="theme-color"]').content='#06080d';
+    localStorage.removeItem('nexora-theme');document.body.classList.remove('light');document.querySelector('meta[name="theme-color"]').content='#06080d';document.querySelector('#theme').setAttribute('aria-label','Cambiar a tema claro');
     const insights=[
       {title:'Diagnóstico · DocuTrace',project:'Alcance',text:'extraer información desde PDF o ZIP, validarla y generar una salida revisable en Excel.'},
       {title:'Automatización · Campus 360',project:'Alcance',text:'configurar un LMS corporativo, sus roles, contenidos, seguimiento e integraciones por API.'},
